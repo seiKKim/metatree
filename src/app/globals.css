@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*common*/
+:root {
+    --white: #ffffff;
+  
+    --black01: #000000;
+    --black02: #4a5361;
+    --black03: #535353;
+  
+    --gray01: #8f959f;
+    --gray02: #b0b0b0;
+    --gray03: #f7f8fa;
+  
+    --green01: #29cc39;
+    --orange01: #ff6633;
+    --yellow01: #ffcb33;
+    --purple01: #b56aff;
+  
+    --size16: 16px;
+    --size18: 18px;
+    --size20: 20px;
+    --size22: 22px;
+    --size24: 24px;
+    --size32: 32px;
+    --size46: 46px;
+}
+
+/* 전체 화면 크기 설정 */
+html, body {
+    width: 100%; /* 전체 너비 사용 */
+    height: 100%; /* 전체 높이 사용 */
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* 스크롤바 표시 */
+}
+
+.contentwrap {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    box-sizing: border-box;
+    padding: 44px 30px 90px 30px;
+    background: var(--gray03);
+    display: flex;
+    gap: 44px;
+}
+
+.contentwrap .sidearea {
+    width: 350px;
+}
+
+.contentwrap .contentarea {
+    width: calc(100% - 394px);
+}
+
+.white-bg {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+}
+
+.main-tit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-tit h3 {
+    font-size: var(--size18);
+    font-weight: 700;
+    color: var(--black02);
+}
+
+/* 폰트 설정 */
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 기본 폰트 설정 */
+    background-color: var(--gray03); /* 배경 색상 설정 */
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 다른 스타일에도 적용 */
+h1, h2, h3, p {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 1024px) {
+    .contentwrap {
+        padding: 20px; /* 패딩 조정 */
+        flex-direction: column; /* 세로 방향으로 배치 */
+    }
+
+    .contentwrap .sidearea,
+    .contentwrap .contentarea {
+        width: 100%; /* 전체 너비 사용 */
+    }
+}

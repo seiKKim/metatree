@@ -1,0 +1,31 @@
+-- CreateTable
+CREATE TABLE `Member` (
+    `mem_id` INTEGER NOT NULL AUTO_INCREMENT,
+    `mem_userid` VARCHAR(100) NOT NULL,
+    `mem_password` VARCHAR(100) NOT NULL,
+    `mem_username` VARCHAR(255) NULL,
+    `mem_nickname` VARCHAR(100) NULL,
+    `mem_level` INTEGER NULL,
+    `mem_email` VARCHAR(255) NULL,
+    `mem_phone` VARCHAR(255) NULL,
+    `mem_birthday` DATE NULL,
+    `mem_sex` CHAR(1) NULL,
+    `mem_zipcode` VARCHAR(255) NULL,
+    `mem_address1` VARCHAR(255) NULL,
+    `mem_address2` VARCHAR(255) NULL,
+    `mem_receive_email` BOOLEAN NULL DEFAULT false,
+    `mem_email_cert` BOOLEAN NULL DEFAULT false,
+    `mem_register_datetime` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `mem_register_ip` VARCHAR(50) NULL,
+    `mem_lastlogin_datetime` DATETIME(3) NULL,
+    `mem_lastlogin_ip` VARCHAR(50) NULL,
+    `mem_is_role` CHAR(1) NULL,
+    `mem_profile_content` TEXT NULL,
+    `mem_adminmemo` TEXT NULL,
+    `mem_smscontents` VARCHAR(255) NULL,
+    `mem_icon` VARCHAR(255) NULL,
+    `mem_photo` VARCHAR(255) NULL,
+
+    UNIQUE INDEX `Member_mem_userid_key`(`mem_userid`),
+    PRIMARY KEY (`mem_id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
