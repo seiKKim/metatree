@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from 'axios';
-import styles from "../../auth/sigup/student/Student.module.css";
+import styles from "../../../components/ui/style.module.css";
 
 const EmailVerification = ({ onVerified }) => {
   const [email, setEmail] = useState(""); // 이메일 상태
